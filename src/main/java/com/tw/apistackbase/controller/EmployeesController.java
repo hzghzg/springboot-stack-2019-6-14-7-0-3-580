@@ -24,6 +24,10 @@ public class EmployeesController {
         });
         return employees;
     }
+    @GetMapping
+    public List<Employee> getEmployee(){
+        return employees;
+    }
 }
 
 
