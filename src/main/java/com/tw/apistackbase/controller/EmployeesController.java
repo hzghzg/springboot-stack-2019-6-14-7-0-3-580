@@ -28,6 +28,11 @@ public class EmployeesController {
     public List<Employee> getEmployee(){
         return employees;
     }
+
+    @PutMapping
+    public  List<Employee> putEmployee(@RequestBody Employee employee){
+        return employees.stream().map(item->item.getId()==employee.getId()?employee:item).collect(Collectors.toList());
+    }
 }
 
 
